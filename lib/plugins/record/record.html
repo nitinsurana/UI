@@ -1,3 +1,9 @@
+
 <button ng-click="ctrl.clickStart()">Start</button>
 <button ng-click="ctrl.clickStop()">Stop</button>
-<button ng-click="ctrl.clickPlay()">Play</button>
+<div ng-repeat="(key, value) in ctrl.records">
+    <span>Id: {{key}} <button ng-click="ctrl.clickPlay(key)">Play</button></span>
+</div>
+
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
